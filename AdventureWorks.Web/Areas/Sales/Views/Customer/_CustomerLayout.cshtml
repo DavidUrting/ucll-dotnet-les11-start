@@ -1,0 +1,19 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-md-10">
+        @RenderBody()
+    </div>
+    <div class="col-md">
+        <h3>Customer of the day</h3>
+        <partial name="CustomerOfTheDay.cshtml" />
+    </div>
+</div>
+
+
+@section Scripts {
+    <script src="~/js/customer.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+}

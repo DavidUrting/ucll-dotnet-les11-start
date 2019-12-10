@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdventureWorks.Domain\AdventureWorks.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\HumanResources\Data\" />
+    <Folder Include="Areas\HumanResources\Models\" />
+    <Folder Include="Areas\HumanResources\Views\" />
+    <Folder Include="Areas\Production\Controllers\" />
+    <Folder Include="Areas\Production\Data\" />
+    <Folder Include="Areas\Production\Models\" />
+    <Folder Include="Areas\Production\Views\" />
+    <Folder Include="Areas\Purchasing\Controllers\" />
+    <Folder Include="Areas\Purchasing\Data\" />
+    <Folder Include="Areas\Purchasing\Models\" />
+    <Folder Include="Areas\Purchasing\Views\" />
+    <Folder Include="Areas\Sales\Data\" />
+    <Folder Include="Documents\" />
+  </ItemGroup>
+
+</Project>

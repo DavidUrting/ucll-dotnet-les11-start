@@ -1,0 +1,10 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+@RenderBody()
+
+@section Scripts {
+    <script src="~/js/home.js" asp-append-version="true"></script>
+    @RenderSection("Scripts", required: false)
+}

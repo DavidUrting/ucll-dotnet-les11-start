@@ -1,0 +1,47 @@
+﻿@model AdventureWorks.Web.Models.SearchViewModel
+
+@{
+    Layout = "_CustomerLayout";
+    ViewData["Title"] = "Search";
+}
+
+<h1>@Model.Subtitle</h1>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Query.Keyword" class="control-label"></label>
+                <input asp-for="Query.Keyword" class="form-control" id="keywordInput" />
+                <span asp-validation-for="Query.Keyword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="searchButton" type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<hr />
+
+<table class="table" id="customers">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+<div>
+    @Html.ActionLink("Create", "Create")
+</div>
